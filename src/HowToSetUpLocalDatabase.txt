@@ -1,0 +1,31 @@
+######################################
+#Author: Jiahe Xiao					 #
+#Date: Aug 7, 2015					 #
+#Title: HowToSetUpLocalDatabase.txt  #
+######################################
+
+1. Download and install mysql on local machine, I use mysql 5.6.21
+   username: root
+   password: 1234
+   port: 3306
+   ** same as the default database attributes in aauction\settings.py
+2. Pull code from staging branch. 
+   //我看了一下，原来那个netmag里面所有的naming都是按照那个tutorial来的，但是里面的内容可以供我们参考。
+   //因为那些命名对于我们来说都不make sense，所以我重新建了一个project，所有新的东西在src folder里面。
+   //我觉得netmag可以作为我们的参考，咱们的project写在src里
+   
+3. run command in shell:
+	#create models
+	$ python manage.py makemigrations signups
+	$ python manage.py makemigrations auctions
+	
+	#create tables
+	$ python manage.py sqlmigrate signups 0001
+	$ python manage.py sqlmigrate auctions 0001
+
+	#see https://docs.djangoproject.com/en/1.8/intro/tutorial01/#activating-models for more info
+	
+4. 我可能说的不是很清楚，如果有疑问的话尽管问！对于整个project的structure你要是有疑问的话也尽管问。加油加油！！！
+
+	
+	
