@@ -1,2 +1,0 @@
-# AAuction
-Best website ever
